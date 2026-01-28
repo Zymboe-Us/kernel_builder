@@ -1,4 +1,4 @@
-name: beryllium
+name: paradox
 
 on:
   workflow_dispatch:
@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-24.04
 
     env:
-      CODENAME: beryllium
+      CODENAME: paradox
       BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
       CHAT_ID: ${{ secrets.CHAT_ID }}
       KERNEL_VER: Paradox
@@ -106,7 +106,7 @@ jobs:
 
         send_telegram_message "🔨 Starting kernel compilation for $CODENAME on branch $KERNEL_BRANCH"
 
-        export KBUILD_BUILD_USER=ivy
+        export KBUILD_BUILD_USER=Zymboe
         export KBUILD_BUILD_HOST="$KERNEL_COMMIT_ID"
         export PATH="$CLANG_DIR/bin:$PATH"
 
