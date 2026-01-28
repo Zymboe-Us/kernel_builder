@@ -12,7 +12,7 @@ jobs:
       BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
       CHAT_ID: ${{ secrets.CHAT_ID }}
       KERNEL_VER: Paradox
-      KERNEL_BRANCH: main
+      KERNEL_BRANCH: backup
       KERNEL_REPO: https://github.com/Zymboe-Us/Paradox-Kernel
       ANYKERNEL_REPO: https://github.com/Zymboe-Us/AnyKernel3
       CLANG_URL: https://gitlab.com/kei-space/clang/r536225.git
