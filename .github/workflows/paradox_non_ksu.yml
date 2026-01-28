@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-24.04
 
     env:
-      CODENAME: paradox
+      CODENAME: beryllium
       BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
       CHAT_ID: ${{ secrets.CHAT_ID }}
       KERNEL_VER: Paradox
@@ -53,7 +53,7 @@ jobs:
     - name: Generate defconfig
       run: |
         cd $KERNEL_DIR
-        CONFIG_NAME="paradox${CODENAME}_defconfig"
+        CONFIG_NAME="${CODENAME}_defconfig"
         DEFCONFIG_PATH="arch/arm64/configs/$CONFIG_NAME"
         sed -i "s/CONFIG_LOCALVERSION=\"-perf\"/CONFIG_LOCALVERSION=\"-$KERNEL_VER\"/" "$DEFCONFIG_PATH"
         make O=out ARCH=arm64 "$CONFIG_NAME"
