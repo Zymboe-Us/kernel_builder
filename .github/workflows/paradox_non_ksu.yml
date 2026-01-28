@@ -1,4 +1,4 @@
-name: AURORA KDDI NON-KSU
+name: beryllium
 
 on:
   workflow_dispatch:
@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-24.04
 
     env:
-      CODENAME: aurora_kddi
+      CODENAME: paradox
       BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
       CHAT_ID: ${{ secrets.CHAT_ID }}
       KERNEL_VER: Paradox
